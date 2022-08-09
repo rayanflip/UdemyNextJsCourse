@@ -1,10 +1,16 @@
 import "./styles.css";
-
+import { Route } from 'react-router-dom';
+import AllMeetupsPage from './pages/AllMeetups';
+import NewMeetup from './pages/NewMeetup';
 export default function App() {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div>
+      <Route path="/">
+          <AllMeetupsPage></AllMeetupsPage>
+      </Route>
+      <Route path='/new-meetup'>
+          <NewMeetup></NewMeetup>
+      </Route>
     </div>
   );
 }
